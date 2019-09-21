@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Listado de anuncios</title>
+</head>
+<body>
+  <div id="content">
+    {% block Contenido%}
+      <h1>Mi lista de anuncios</h1>
+      {% for anuncio in anuncios %}
+        <h2>
+            {{ anuncio.titulo }}
+        </h2>
+        <p>
+          {{ anuncio.texto }}
+        </p>
+
+      {% endfor %}
+
+    {% endblock %}
+  </div>
+</body>
+</html>
